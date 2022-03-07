@@ -1,7 +1,7 @@
 CC = clang++
-SRC = megaphone.cpp
+SRC = Account.cpp tests.cpp
 FALGS = -Wall -Wextra -Werror
-NAME = megaphone
+NAME = test
 OBJS = $(SRC:.cpp=.o)
 
 all: $(NAME)

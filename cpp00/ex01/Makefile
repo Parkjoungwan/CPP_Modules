@@ -1,7 +1,7 @@
 CC = clang++
-SRC = megaphone.cpp
+SRC = src/Contact.cpp src/Phonebook.cpp src/main.cpp
 FALGS = -Wall -Wextra -Werror
-NAME = megaphone
+NAME = Phonebooking
 OBJS = $(SRC:.cpp=.o)
 
 all: $(NAME)
@@ -9,7 +9,7 @@ all: $(NAME)
 $(NAME): $(OBJS)
 	$(CC) $(OBJS) $(FALGS) -o $(NAME)
 .cpp.o:
-	$(CC) -c $< -o $(<:.cpp=.o)
+	$(CC) -I./includes -c $< -o $(<:.cpp=.o)
 
 clean:
 	rm -f $(OBJS)
