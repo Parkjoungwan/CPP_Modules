@@ -44,7 +44,8 @@ int	main(int argc, char **argv)
 			break;
 		case 4:
 		default:
-			std::cout << "[ Probably complaining about insignificant problems ]" << std::endl; 
+			std::cout << "[ Probably complaining about insignificant problems ]" << std::endl;
+			break;
 	}
 	return (0);
 }
