@@ -1,7 +1,7 @@
 CC = clang++
-SRC = Account.cpp tests.cpp
+SRC = main.cpp Fixed.cpp
 FALGS = -Wall -Wextra -Werror
-NAME = test
+NAME = Fixed2
 OBJS = $(SRC:.cpp=.o)
 
 all: $(NAME)
