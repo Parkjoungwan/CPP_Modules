@@ -8,13 +8,13 @@ Fixed::Fixed(void): raw(0)
 Fixed::Fixed(const int	value)
 {
 	std::cout << "Int constructor called" << std::endl;
-	raw = value << point;
+	raw = value << bit;
 }
 
 Fixed::Fixed(const float	value)
 {
 	std::cout << "Float constructor called" << std::endl;
-	raw = std::roundf(value * (1 << point));
+	raw = std::roundf(value * (1 << bit));
 }
 
 Fixed::Fixed(const Fixed	&other)
@@ -45,12 +45,12 @@ int	Fixed::getRawBits(void) const
 
 int	Fixed::toInt(void) const
 {
-	return raw >> point;
+	return raw >> bit;
 }
 
 float	Fixed::toFloat(void) const
 {
-	return	static_cast<float>(this->raw) / (1 << point);
+	return	static_cast<float>(this->raw) / (1 << bit);
 }
 
 std::ostream &operator<<(std::ostream &os, const Fixed &f)

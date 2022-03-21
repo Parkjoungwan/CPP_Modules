@@ -16,12 +16,12 @@ Fixed::~Fixed(void)
 	std::cout << "Destructor called" << std::endl;
 }
 
-Fixed &Fixed::operator=(const Fixed &rhs)
+Fixed &Fixed::operator=(const Fixed &other)
 {
-	if (this != &rhs)
+	if (this != &other)
 	{
 		std::cout << "Assignation operator called" << std::endl;
-		raw = rhs.getRawBits();
+		raw = other.getRawBits();
 	}
 	return (*this);
 }
