@@ -1,7 +1,7 @@
 CC = clang++
-SRC = main.cpp Zombie.cpp ZombieHorde.cpp
+SRC = main.cpp Fixed.cpp 
 FALGS = -Wall -Wextra -Werror
-NAME = ZZom2
+NAME = Fixed00
 OBJS = $(SRC:.cpp=.o)
 
 all: $(NAME)
