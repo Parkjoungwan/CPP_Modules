@@ -1,4 +1,4 @@
-CC = clang++
+CC = c++
 SRC = main.cpp Fixed.cpp 
 FALGS = -Wall -Wextra -Werror
 NAME = Fixed01
