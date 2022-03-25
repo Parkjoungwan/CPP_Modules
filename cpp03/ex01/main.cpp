@@ -12,9 +12,11 @@ int main()
 	player2.takeDamage(player1.getAttackDamage());
 	player1.attack("player2");
 	player2.takeDamage(player1.getAttackDamage());
-	player1.attack("player2");
+	player2.attack("player1");
+	player1.takeDamage(player2.getAttackDamage());
 	player2.beRepaired(5);
 	player1.attack("player2");
+	player2.takeDamage(player1.getAttackDamage());
 	
 	std::cout << "\n--------------testing2--------------\n" << std::endl;
 
@@ -24,12 +26,14 @@ int main()
 	ct1.attack("ST 1");
 	st1.takeDamage(ct1.getAttackDamage());
 	st1.guardGate();
-	st1.attack("CT 1");
-	ct1.takeDamage(st1.getAttackDamage());
-	ct1.beRepaired(30);
-	st1.attack("CT 1");
-	ct1.takeDamage(st1.getAttackDamage());
-	st1.attack("CT 1");
+	st1.beRepaired(10);
+	ct1.attack("ST 1");
+	st1.takeDamage(ct1.getAttackDamage());
+	st1.beRepaired(10);
+	ct1.attack("ST 1");
+	st1.takeDamage(ct1.getAttackDamage());
+	st1.beRepaired(10);
 
+	std::cout << "\n--------------cleaning--------------\n" << std::endl;
 	return (0);
 }

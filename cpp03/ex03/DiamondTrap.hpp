@@ -6,13 +6,12 @@
 /*   By: joupark <joupark@student.42seoul.kr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/23 13:07:10 by joupark           #+#    #+#             */
-/*   Updated: 2022/03/23 13:34:04 by joupark          ###   ########.fr       */
+/*   Updated: 2022/03/25 14:37:36 by joupark          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef	DIAMONDTRAP_HPP
 #define	DIAMONDTRAP_HPP
-#include <iostream>
 #include "ScavTrap.hpp"
 #include "FragTrap.hpp"
 #include "ClapTrap.hpp"
