@@ -6,7 +6,7 @@
 /*   By: joupark <joupark@student.42seoul.kr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/23 12:25:53 by joupark           #+#    #+#             */
-/*   Updated: 2022/03/23 12:25:54 by joupark          ###   ########.fr       */
+/*   Updated: 2022/03/28 16:07:42 by joupark          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,6 @@ class	FragTrap : public ClapTrap
 		FragTrap(const FragTrap &other);
 		FragTrap(std::string name);
 
-		std::string	getName(void);
 		void		highFivesGuys(void);
 
 		FragTrap	&operator=(FragTrap const	&other);

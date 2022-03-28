@@ -6,7 +6,7 @@
 /*   By: joupark <joupark@student.42seoul.kr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/23 12:25:18 by joupark           #+#    #+#             */
-/*   Updated: 2022/03/25 14:29:26 by joupark          ###   ########.fr       */
+/*   Updated: 2022/03/28 17:42:32 by joupark          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,23 +17,25 @@
 
 int main()
 {
-	std::cout << "--------------testing1--------------" << std::endl;
+	std::cout << "--------------testing1--------------\n" << std::endl;
 	{
 		ClapTrap player1("player1");
 		ClapTrap player2("player2");
 
-		player1.attack("player2");
-		player2.takeDamage(player1.getAttackDamage());
-		player1.attack("player2");
-		player2.takeDamage(player1.getAttackDamage());
-		player2.attack("player1");
-		player1.takeDamage(player2.getAttackDamage());
-		player2.beRepaired(5);
-		player1.attack("player2");
-		player2.takeDamage(player1.getAttackDamage());
-		std::cout << "--------------cleaning--------------" << std::endl;
+		for (int i = 0; i < 5; i++)
+		{
+			player1.attack("player2");
+			player2.takeDamage(player1.getAttackDamage());
+		}
+		for (int i = 0; i < 5; i++)
+		{
+			player1.beRepaired(5);
+		}
+		player1.attack("nothing");
+		player2.takeDamage(10);
+		std::cout << "\n--------------cleaning--------------\n" << std::endl;
 	}
-	std::cout << "\n--------------testing2--------------" << std::endl;
+	std::cout << "\n--------------testing2--------------\n" << std::endl;
 	{
 		ScavTrap	st1("ST 1");
 		ClapTrap	ct1("CT 1");
@@ -42,17 +44,13 @@ int main()
 		st1.takeDamage(ct1.getAttackDamage());
 		st1.guardGate();
 		st1.beRepaired(10);
-		ct1.attack("ST 1");
-		st1.takeDamage(ct1.getAttackDamage());
-		st1.beRepaired(10);
-		ct1.attack("ST 1");
-		st1.takeDamage(ct1.getAttackDamage());
-		st1.beRepaired(10);
-		std::cout << "--------------cleaning--------------" << std::endl;
+		st1.attack("CT 1");
+		ct1.takeDamage(st1.getAttackDamage());
+		std::cout << "\n--------------cleaning--------------\n" << std::endl;
 	}
 	std::cout << "\n--------------testing3--------------" << std::endl;
 	{
-		ScavTrap st1("CT 1");
+		ScavTrap st1("ST 1");
 		FragTrap ft1("FT 1");
 
 		st1.guardGate();
@@ -60,21 +58,22 @@ int main()
 		st1.attack("FT 1");
 		ft1.takeDamage(st1.getAttackDamage());
 
-		ft1.beRepaired(40);
-		ft1.attack("CT 1");
-		st1.takeDamage(ft1.getAttackDamage());
-		st1.beRepaired(10);
-
 		ft1.highFivesGuys();
-		ft1.attack("CT 1");
-		st1.takeDamage(ft1.getAttackDamage());
+		for (int i = 0; i < 4; i++)
+		{
+			ft1.attack("ST 1");
+			st1.takeDamage(ft1.getAttackDamage());
+		}
 		std::cout << "--------------cleaning--------------" << std::endl;
 	}
 	std::cout << "\n--------------testing4--------------" << std::endl;
 	{
-		DiamondTrap	dt1("DT 1");
+		DiamondTrap	dt1("dt 1");
+		DiamondTrap dt2(dt1);
+
 		dt1.attack("The void");
 		dt1.whoAmI();
+		dt2.whoAmI();
 		std::cout << "--------------cleaning--------------" << std::endl;
 	}
 	return (0);

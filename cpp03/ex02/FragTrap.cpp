@@ -6,7 +6,7 @@
 /*   By: joupark <joupark@student.42seoul.kr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/23 12:25:30 by joupark           #+#    #+#             */
-/*   Updated: 2022/03/23 12:25:31 by joupark          ###   ########.fr       */
+/*   Updated: 2022/03/28 17:33:45 by joupark          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,7 @@
 
 FragTrap::FragTrap() : ClapTrap()
 {
+	std::cout << "FragTrap <Unknown> was created!!" << std::endl;
 	name = "Unknown";
 	hitPoints = 100;
 	energyPoints = 100;
@@ -27,10 +28,8 @@ FragTrap::~FragTrap()
 
 FragTrap::FragTrap(const FragTrap	&other) : ClapTrap(other)
 {
-	this->name = other.name;
-	this->hitPoints = other.hitPoints;
-	this->energyPoints = other.energyPoints;
-	this->attackDamage = other.attackDamage;
+	std::cout << "FragTrap <" << this->name << "> was copied!!" << std::endl;
+	*this = other;
 }
 
 FragTrap::FragTrap(std::string name) : ClapTrap(name)
@@ -42,14 +41,9 @@ FragTrap::FragTrap(std::string name) : ClapTrap(name)
 	this->attackDamage = 30;
 }
 
-std::string	FragTrap::getName(void)
-{
-	return (this->name);
-}
-
 void		FragTrap::highFivesGuys(void)
 {
-	std::cout << "high Fives Guys!!" << std::endl;
+	std::cout << "High Fives Guys!!" << std::endl;
 }
 
 FragTrap	&FragTrap::operator=(FragTrap const	&other)

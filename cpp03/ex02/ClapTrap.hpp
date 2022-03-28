@@ -1,15 +1,3 @@
-/* ************************************************************************** */
-/*                                                                            */
-/*                                                        :::      ::::::::   */
-/*   ClapTrap.hpp                                       :+:      :+:    :+:   */
-/*                                                    +:+ +:+         +:+     */
-/*   By: joupark <joupark@student.42seoul.kr>       +#+  +:+       +#+        */
-/*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/03/23 12:26:04 by joupark           #+#    #+#             */
-/*   Updated: 2022/03/23 12:26:05 by joupark          ###   ########.fr       */
-/*                                                                            */
-/* ************************************************************************** */
-
 #ifndef	CLAPTRAP_HPP
 #define	CLAPTRAP_HPP
 #include <iostream>
@@ -25,7 +13,7 @@ class	ClapTrap
 		void			setAttackDamage(unsigned int);
 		unsigned int	getAttackDamage(void) const;
 
-		void	attack(std::string const &target);
+		void	attack(const std::string &target);
 		void	takeDamage(unsigned int	amount);
 		void	beRepaired(unsigned int amount);
 
