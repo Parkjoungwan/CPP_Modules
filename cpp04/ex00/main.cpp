@@ -6,7 +6,7 @@
 /*   By: joupark <joupark@student.42seoul.kr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/01 13:29:56 by joupark           #+#    #+#             */
-/*   Updated: 2022/04/02 13:32:39 by joupark          ###   ########.fr       */
+/*   Updated: 2022/04/02 15:22:18 by joupark          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,6 +28,9 @@ int main() {
 		j->makeSound();
 		meta->makeSound();
 		std::cout << "----------cleaning----------" << std::endl;
+		delete meta;
+		delete i;
+		delete j;
 	}
 	std::cout << "\n----------test0----------" << std::endl;
 	{
@@ -37,6 +40,8 @@ int main() {
 		i->makeSound();
 		meta->makeSound();
 		std::cout << "----------cleaning----------" << std::endl;
+		delete meta;
+		delete i;
 	}
 	return 0; 
 }

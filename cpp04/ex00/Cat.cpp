@@ -14,7 +14,7 @@ Cat::Cat(const Cat	&other)
 
 Cat::~Cat()
 {
-	std::cout << "Deconstructor 'Cat' called" << std::endl;
+	std::cout << "Destructor 'Cat' called" << std::endl;
 }
 
 

@@ -8,7 +8,7 @@ class WrongAnimal
 	public:
 		WrongAnimal();
 		WrongAnimal(const WrongAnimal	&other);
-		~WrongAnimal();
+		virtual ~WrongAnimal();
 
 		void		setType(std::string	type);
 		std::string	getType() const;

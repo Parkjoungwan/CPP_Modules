@@ -13,7 +13,7 @@ Dog::Dog(const Dog	&other)
 }
 Dog::~Dog()
 {
-	std::cout << "Deconstructor 'Dog' called" << std::endl;
+	std::cout << "Destructor 'Dog' called" << std::endl;
 }
 
 void		Dog::makeSound() const
