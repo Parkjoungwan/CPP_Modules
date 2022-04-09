@@ -4,9 +4,13 @@ ShrubberyCreationForm::ShrubberyCreationForm(std::string target) : Form("Shrubbe
 {
 }
 
-ShrubberyCreationForm::ShrubberyCreationForm(const ShrubberyCreationForm	&other)
+ShrubberyCreationForm::ShrubberyCreationForm(const ShrubberyCreationForm	&other) : Form(other)
 {
 	*this = other;
+}
+
+ShrubberyCreationForm::~ShrubberyCreationForm()
+{
 }
 
 bool						ShrubberyCreationForm::execute(Bureaucrat const	&executor) const

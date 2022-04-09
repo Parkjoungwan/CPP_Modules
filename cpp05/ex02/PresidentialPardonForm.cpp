@@ -4,7 +4,7 @@ PresidentialPardonForm::PresidentialPardonForm(std::string target) : Form("Presi
 {
 }
 
-PresidentialPardonForm::PresidentialPardonForm(const PresidentialPardonForm	&other)
+PresidentialPardonForm::PresidentialPardonForm(const PresidentialPardonForm	&other) : Form(other)
 {
 	*this = other;
 }

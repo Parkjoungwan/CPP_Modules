@@ -6,10 +6,10 @@
 class ShrubberyCreationForm : public Form
 {
 	public:
-		ShrubberyCreationForm(std::string target);
 		ShrubberyCreationForm(const ShrubberyCreationForm	&other);
+		ShrubberyCreationForm(std::string target);
 		virtual ~ShrubberyCreationForm();
-		virtual bool				execute(Bureaucrat const	&executor) const;
+		virtual bool	execute(Bureaucrat const	&executor) const;
 		const ShrubberyCreationForm	&operator=(const ShrubberyCreationForm	&other);
 	
 	private:

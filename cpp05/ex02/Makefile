@@ -1,7 +1,7 @@
 CC = c++
 SRC = main.cpp Bureaucrat.cpp Form.cpp PresidentialPardonForm.cpp RobotomyRequestForm.cpp ShrubberyCreationForm.cpp
 FALGS = -std=c++98 -Wall -Wextra -Werror
-NAME = ex01 
+NAME = ex02 
 OBJS = $(SRC:.cpp=.o)
 
 all: $(NAME)
@@ -12,7 +12,7 @@ $(NAME): $(OBJS)
 	$(CC) $(FALGS) -c $< -o $(<:.cpp=.o)
 
 clean:
-	rm -f $(OBJS)
+	rm -f $(OBJS) 
 
 fclean: clean
 	rm -f $(NAME)

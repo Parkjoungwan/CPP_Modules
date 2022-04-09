@@ -5,7 +5,7 @@ RobotomyRequestForm::RobotomyRequestForm(std::string	target) : Form("RobotomyReq
 }
 
 
-RobotomyRequestForm::RobotomyRequestForm(const RobotomyRequestForm	&other)
+RobotomyRequestForm::RobotomyRequestForm(const RobotomyRequestForm	&other) : Form(other)
 {
 	*this = other;
 }
