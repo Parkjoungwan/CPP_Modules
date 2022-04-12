@@ -12,7 +12,7 @@ $(NAME): $(OBJS)
 	$(CC) $(FALGS) -c $< -o $(<:.cpp=.o)
 
 clean:
-	rm -f $(OBJS) 
+	rm -f $(OBJS)  *_shrubbery
 
 fclean: clean
 	rm -f $(NAME)

@@ -24,16 +24,15 @@ bool						ShrubberyCreationForm::execute(Bureaucrat const	&executor) const
 	{
 		std::fstream	to_read;
 		std::fstream	to_write;
+		std::string		buf;
+		buf += " _\n";
+		buf += "| |\n";
+		buf += "| |_ _ __ ___  ___\n";
+		buf += "| __| '__/ _ \\/ _ \\\n";
+		buf += "| |_| | |  __/  __/\n";
+		buf += " \\__|_|  \\___|\\___|\n";
 		to_write.open(this->target + "_shrubbery", std::fstream::out | std::fstream::trunc);
-		to_read.open("tree", std::fstream::in);
-		if (!to_read.is_open())
-			std::cout << "can't open tree" <<std::endl;
-		to_read.seekg(0, to_read.end);
-		int	length_buf = to_read.tellg();
-		char	*buffer = new char[length_buf];
-		std::string	buf(buffer);
 		to_write.write(buf.c_str(), buf.length());
-		delete [] buffer;
 		return (true);
 	}
 	else
