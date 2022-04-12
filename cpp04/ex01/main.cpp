@@ -6,7 +6,7 @@
 /*   By: joupark <joupark@student.42seoul.kr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/01 13:29:56 by joupark           #+#    #+#             */
-/*   Updated: 2022/04/02 14:05:37 by joupark          ###   ########.fr       */
+/*   Updated: 2022/04/06 15:33:11 by joupark          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,13 +20,13 @@
 int main() {
 	Animal	*array[4];
 
-	std::cout << "crate dogs==========" << std::endl;
+	std::cout << "create dogs==========" << std::endl;
 	for (int i = 0; i <2; i++)
 		array[i] = new Dog();
-	std::cout << "\ncrate cats==========" << std::endl;
+	std::cout << "\ncreate cats==========" << std::endl;
 	for (int i = 2; i < 4; i++)
 		array[i] = new Cat();
-	std::cout << "\ncleaning all==========" << std::endl;
+	std::cout << "\nclean all==========" << std::endl;
 	for (int i = 0; i < 4; i++)
 		delete array[i];
 
