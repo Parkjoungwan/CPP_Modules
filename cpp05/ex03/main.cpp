@@ -6,7 +6,7 @@
 /*   By: joupark <joupark@student.42seoul.kr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/04 12:58:20 by joupark           #+#    #+#             */
-/*   Updated: 2022/04/08 13:54:37 by joupark          ###   ########.fr       */
+/*   Updated: 2022/04/12 13:34:55 by joupark          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,53 +15,42 @@
 #include "PresidentialPardonForm.hpp"
 #include "RobotomyRequestForm.hpp"
 #include "ShrubberyCreationForm.hpp"
+#include "Intern.hpp"
 
 int	main()
 {
-	Bureaucrat one("Hue");
-	Bureaucrat two("Lone");
-	Bureaucrat three("Jack");
+	Intern		internHuman;
+	std::string	target = "Park";
+	{
+		Form		*formToMake;
 
-	std::cout << "making Bureaucrat==========" << std::endl;
-	try
-	{
-		one.setGrade(137);
-		std::cout << one << std::endl;
-		two.setGrade(45);
-		std::cout << two << std::endl;
-		three.setGrade(5);
-		std::cout << three << std::endl;
+		formToMake = internHuman.makeForm("shrubbery creation", target);
+		if (formToMake)
+			std::cout << *formToMake << std::endl;
+		delete formToMake;
 	}
-	catch (std::exception	&err)
 	{
-		std::cerr << err.what() <<std::endl;	
+		Form		*formToMake;
+
+		formToMake = internHuman.makeForm("presidential pardon", target);
+		if (formToMake)
+			std::cout << *formToMake << std::endl;
+		delete formToMake;
 	}
-	std::cout << "making Forms==========" << std::endl;
-	Form	*formOne = new PresidentialPardonForm("Hue");
-	Form	*formTwo = new RobotomyRequestForm("Lone");
-	Form	*formThree = new ShrubberyCreationForm("Jack");
-	std::cout << *formOne << std::endl;
-	std::cout << *formTwo << std::endl;
-	std::cout << *formThree << std::endl;
-	try
 	{
-		one.signForm(*formOne);
-		two.signForm(*formTwo);
-		three.signForm(*formThree);
+		Form		*formToMake;
+
+		formToMake = internHuman.makeForm("robotomy request", target);
+		if (formToMake)
+			std::cout << *formToMake << std::endl;
+		delete formToMake;
 	}
-	catch (std::exception	&err)
 	{
-		std::cerr << err.what() <<std::endl;	
-	}
-	std::cout << "executing Forms==========" << std::endl;
-	try
-	{
-		one.executeForm(*formOne);
-		two.executeForm(*formTwo);
-		three.executeForm(*formThree);
-	}
-	catch (std::exception	&err)
-	{
-		std::cerr << err.what() <<std::endl;	
+		Form		*formToMake;
+
+		formToMake = internHuman.makeForm("whwhwhwhwh", target);
+		if (formToMake)
+			std::cout << *formToMake << std::endl;
+		delete formToMake;
 	}
 }

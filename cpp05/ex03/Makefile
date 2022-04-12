@@ -1,7 +1,7 @@
 CC = c++
-SRC = main.cpp Bureaucrat.cpp Form.cpp PresidentialPardonForm.cpp RobotomyRequestForm.cpp ShrubberyCreationForm.cpp
+SRC = main.cpp Bureaucrat.cpp Form.cpp PresidentialPardonForm.cpp RobotomyRequestForm.cpp ShrubberyCreationForm.cpp Intern.cpp
 FALGS = -std=c++98 -Wall -Wextra -Werror
-NAME = ex02 
+NAME = ex03
 OBJS = $(SRC:.cpp=.o)
 
 all: $(NAME)
