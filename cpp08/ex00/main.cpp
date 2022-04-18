@@ -12,8 +12,9 @@ int	main()
 
 	try
 	{
-		easyfind(vec, 4);
-		std::cout << "I found it!" << std::endl;
+		int result;
+		result = easyfind(vec, 4);
+		std::cout << "I found it! : " << result << std::endl;
 	}
 	catch(std::exception	&e)
 	{
@@ -21,8 +22,9 @@ int	main()
 	}
 	try
 	{
-		easyfind(vec, 5);
-		std::cout << "I found it!" << std::endl;
+		int result;
+		result = easyfind(vec, 5);
+		std::cout << "I found it! : " << result << std::endl;
 	}
 	catch(std::exception	&e)
 	{
