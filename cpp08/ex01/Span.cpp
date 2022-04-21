@@ -34,11 +34,33 @@ void	Span::addNumber(const int	&num)
 	vec.push_back(num);
 }
 
+void	Span::addNumbers(std::vector<int>::iterator first, std::vector<int>::iterator last)
+{
+	unsigned int	left = max - vec.size();
+	std::vector<int>::iterator	lastLast;
+	unsigned int	old_size = vec.size();
+	bool	check = false;
+	if (left < (last - first))
+	{
+		lastLast = first + left;
+		check = true;
+		vec.resize(max);
+	}
+	else
+	{
+		lastLast = last;
+		vec.resize(old_size + (last - first));
+	}
+	std::vector<int>::iterator copyStart = vec.begin() + old_size;
+	std::copy(first, lastLast, copyStart);
+	if (check)
+		throw std::range_error("too many elements, copy partly");
+}
+
 int		Span::shortestSpan() const
 {
 	int result;
 	std::vector<int> temp = vec;
-	
 	if (vec.size() < 2)
 		throw std::range_error("Not enough elements.");
 	sort(temp.begin(), temp.end());

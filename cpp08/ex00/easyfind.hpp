@@ -5,7 +5,7 @@
 # include <algorithm>
 
 template<typename	T>
-const int	&easyfind(T	&array, int val)
+const int	&easyfind(const T	&array, int val)
 {
 	typename T::const_iterator	it = std::find(array.begin(), array.end(), val);
 	if (it == array.end())
